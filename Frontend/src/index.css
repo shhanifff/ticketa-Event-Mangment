@@ -1,0 +1,26 @@
+@import "tailwindcss";
+/*  ggogle font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.poppins-text {
+  font-family: 'Poppins', sans-serif;
+}
+.Roboto-text{
+  font-family: 'Roboto', sans-serif;
+}
+.Montserrat-text{
+  font-family: 'Montserrat', sans-serif;
+}
+.Prompt-text{
+  font-family: 'Prompt', sans-serif;
+}
+
+.bx-ticket:hover {
+  /* color: #FBBF24; */
+  transform: scale(1.1);
+}
+
