@@ -2,8 +2,13 @@ import { useContext, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { MyContext } from "../../context/EventContext";
 import { EventCard } from "../../components/EventCard";
+import { Notyf } from "notyf";
 
 function EventDetails() {
+  const notyf = new Notyf({
+    duration: 4000,
+    position: { x: "right", y: "top" },
+  });
   const { id } = useParams();
   const { eventsArray } = useContext(MyContext);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -24,7 +29,15 @@ function EventDetails() {
 
   const handleBooking = async () => {
     if (!userId) {
-      alert("PLease Login");
+      notyf.open({
+        type: "warning",
+        background: '#FFA500',
+        duration: 3000,
+        ripple: true,
+        message: "Please login to Booking!",
+      });
+
+      return;
     }
 
     navigate(`/user/event-booking/${id}`);

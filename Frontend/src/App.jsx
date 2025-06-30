@@ -59,8 +59,7 @@ function App() {
 
         <Route path="/user" element={<UserProtectedRoute />}>
           <Route path="profile" element={<UserProfile />} />
-          <Route path="events" element={<EventListing />} />
-          <Route path="events/:id" element={<EventDetails />} />
+
           <Route path="event-booking/:id" element={<EventBooking />} />
         </Route>
 
@@ -78,17 +77,13 @@ function App() {
         </Route>
 
         {/* //  booking details  */}
-        
-        {/* <Route path="/notyf" element={<NotificationClient />} /> */}
         <Route path="/booking/:bookingId" element={<BookingQRdetails />} />
         {/* // public //  */}
+        <Route path="events" element={<EventListing />} />
+        <Route path="events/:id" element={<EventDetails />} />
         <Route path="/" element={<Home />} />
-        {/* <Route path="/login" element={<Login />} /> */}
-        {/* <Route path="/register" element={<Register />} /> */}
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/about" element={<About />} />
-        {/* otp verify  */}
-        {/* <Route path="/otp-verify" element={<OTPVerification />} /> */}
         {/* 404 */}
         <Route path="*" element={<NotFound_404 />} />
       </Routes>

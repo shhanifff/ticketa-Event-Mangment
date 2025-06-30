@@ -34,7 +34,7 @@ export function EventCard({ event, aos, anchor }) {
       className="flex flex-col justify-between h-full overflow-hidden group bg-[#1B1B1E] rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer"
       data-aos={aos}
       data-aos-anchor-placement={anchor}
-      onClick={() => navigate(`/user/events/${event?._id || ""}`)}
+      onClick={() => navigate(`/events/${event?._id || ""}`)}
     >
       <div className="relative overflow-hidden w-full h-52 sm:h-60 md:h-64 min-h-[13rem]">
         {imgLoading && (

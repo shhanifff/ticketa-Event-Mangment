@@ -3,7 +3,7 @@ import bookingModel from "../../models/bookingModel/bookingModel.js";
 import eventModel from "../../../admin/models/eventsModel/eventsModel.js";
 import { sendEventTicket } from "../../../utils/sendMail.js";
 import QRCode from "qrcode";
-import { checkUserId } from "../../service/bookingService.js";
+// import { checkUserId } from "../../service/bookingService.js";
 
 
 export const handleBooking = async (req, res) => {
@@ -29,7 +29,7 @@ export const handleBooking = async (req, res) => {
     return res.status(400).json({ message: "Invalid Event ID" });
   }
 
-  await checkUserId(id)
+  // await checkUserId(id)
 
   const currentEvent = await eventModel.findById(id);
 

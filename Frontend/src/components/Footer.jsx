@@ -127,7 +127,7 @@ function Footer() {
                 <span>Home</span>
               </Link>
               <Link
-                to="/user/events"
+                to="/events"
                 className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2 group"
               >
                 <span className="w-0 h-0.5 bg-[#4B5563] group-hover:w-3 transition-all duration-300"></span>

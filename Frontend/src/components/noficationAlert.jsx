@@ -34,7 +34,7 @@ function NotificationClient() {
           cursor: "pointer",
           marginTop: "8px",
         }}
-        onClick={() => navigate(`/user/events/${eventId}`)}
+        onClick={() => navigate(`/events/${eventId}`)}
       >
         View Event
       </button>

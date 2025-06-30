@@ -18,12 +18,10 @@ function ManageUsers() {
       .slice(0, 2);
   };
 
-  // ❗️Handle empty or invalid users
   if (!Array.isArray(users) || users.length === 0) {
     return <p className="text-white">No users available</p>;
   }
-
-  // 🔍 Filter users based on search input
+ 
   const filteredUsers = users.filter(
     (user) =>
       user?.username?.toLowerCase().includes(searchQuery.toLowerCase()) ||

@@ -229,7 +229,7 @@ function Home() {
                   key={index}
                   onClick={() => {
                     SelectedByCategory(category.name);
-                    navigate("/user/events");
+                    navigate("/events");
                   }}
                 >
                   {/* Background image with overlay */}

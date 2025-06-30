@@ -150,15 +150,15 @@ function Navbar() {
             )}
           </Link>
           <Link
-            to="/user/events"
+            to="/events"
             className={`relative px-3 py-2 font-medium text-sm uppercase tracking-wide transition-colors duration-300
               ${
-                isActive("/user/events")
+                isActive("/events")
                   ? "text-black dark:text-white after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-black dark:after:bg-white"
                   : "text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-gray-200"
               }`}
           >
-            {isActive("/user/events") ? (
+            {isActive("/events") ? (
               <>
                 <i className="bx bx-calendar-event"></i> Events
               </>
@@ -435,9 +435,9 @@ function Navbar() {
                 <span>Home</span>
               </Link>
               <Link
-                to="/user/events"
+                to="/events"
                 className={`px-4 py-4 rounded-lg flex items-center space-x-3 font-medium ${
-                  isActive("/user/events")
+                  isActive("/events")
                     ? "bg-[#2D2D2D] text-white border-l-4 border-[#9d9d9e]"
                     : "text-gray-400 hover:bg-[#2D2D2D]"
                 }`}
