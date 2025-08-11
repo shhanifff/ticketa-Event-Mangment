@@ -1,7 +1,6 @@
-
-
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import ticketaLogo from "../assets/images/ticketa logo.png";
 
 function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,24 +16,46 @@ function Footer() {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#4B5563] to-transparent opacity-30"></div>
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#4B5563] rounded-full filter blur-[100px] opacity-10"></div>
       <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-[#6B7280] rounded-full filter blur-[100px] opacity-10"></div>
-      
+
       {/* Added subtle grain texture */}
-      <div className="absolute inset-0 opacity-5" style={{ 
-        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` 
-      }}></div>
+      <div
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+        }}
+      ></div>
 
       {/* Logo & Social Media Section - Improved for mobile */}
-      <div 
-        className={`relative py-12 sm:py-16 px-6 sm:px-8 lg:px-16 flex flex-col sm:flex-row items-center justify-between transition-opacity duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+      <div
+        className={`relative py-12 sm:py-16 px-6 sm:px-8 lg:px-16 flex flex-col sm:flex-row items-center justify-between transition-opacity duration-700 ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
       >
         {/* Logo Section with enhanced animations */}
-        <div className="flex items-center gap-4 mb-8 sm:mb-0 group">
+        {/* <div className="flex items-center gap-4 mb-8 sm:mb-0 group">
           <div className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-[#4B5563] to-[#6B7280] rounded-full flex items-center justify-center shadow-lg group-hover:shadow-[#4B5563]/30 transition-all duration-300 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-[#4B5563] to-[#6B7280] opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
             <span className="text-white text-xl sm:text-2xl font-bold relative z-10">
               T
             </span>
           </div>
+          <div className="flex flex-col">
+            <h1 className="text-white font-extrabold text-2xl sm:text-3xl lg:text-5xl tracking-tight bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text group-hover:text-transparent transition-all duration-500">
+              ticketa
+            </h1>
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-gray-400">Experience the hype</span>
+            </div>
+          </div>
+        </div> */}
+
+        {/* Logo Section with enhanced animations */}
+        <div className="flex items-center gap-4 mb-8 sm:mb-0 group">
+            <img
+              src={ticketaLogo}
+              alt="Ticketa Logo"
+              className="sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-cover relative z-10"
+            />
           <div className="flex flex-col">
             <h1 className="text-white font-extrabold text-2xl sm:text-3xl lg:text-5xl tracking-tight bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text group-hover:text-transparent transition-all duration-500">
               ticketa
@@ -181,13 +202,17 @@ function Footer() {
                 <div className="w-8 h-8 rounded-full bg-[#2D2D30] flex items-center justify-center group-hover:bg-[#4B5563] transition-colors duration-300">
                   <i className="fa-solid fa-location-dot text-sm"></i>
                 </div>
-                <span className="text-sm sm:text-base">Ticketa Complex, Bangalore</span>
+                <span className="text-sm sm:text-base">
+                  Ticketa Complex, Bangalore
+                </span>
               </div>
               <div className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-200 group">
                 <div className="w-8 h-8 rounded-full bg-[#2D2D30] flex items-center justify-center group-hover:bg-[#4B5563] transition-colors duration-300">
                   <i className="fa-solid fa-envelope text-sm"></i>
                 </div>
-                <span className="text-sm sm:text-base">support@ticketa.com</span>
+                <span className="text-sm sm:text-base">
+                  support@ticketa.com
+                </span>
               </div>
               <div className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-200 group">
                 <div className="w-8 h-8 rounded-full bg-[#2D2D30] flex items-center justify-center group-hover:bg-[#4B5563] transition-colors duration-300">
@@ -199,26 +224,6 @@ function Footer() {
           </div>
         </div>
       </div>
-
-      {/* Newsletter Subscription - New section */}
-      {/* <div className="relative bg-[#1F1F23] w-full py-10 sm:py-12 px-6 sm:px-8 lg:px-16 border-t border-[#2D2D30]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-          <div className="max-w-md">
-            <h3 className="text-xl font-bold mb-2">Stay Updated</h3>
-            <p className="text-gray-400 text-sm">Subscribe to our newsletter for exclusive offers and event updates</p>
-          </div>
-          <div className="w-full md:w-auto flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
-            <input 
-              type="email" 
-              placeholder="Enter your email" 
-              className="bg-[#2D2D32] border border-[#3D3D42] rounded-md px-4 py-2 outline-none focus:border-[#4B5563] transition-colors duration-200 w-full sm:w-64"
-            />
-            <button className="bg-gradient-to-r from-[#4B5563] to-[#6B7280] hover:from-[#6B7280] hover:to-[#9CA3AF] text-white font-medium py-2 px-6 rounded-md transition-all duration-300 shadow-lg hover:shadow-[#4B5563]/30">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </div> */}
 
       {/* Copyright Bar - Improved for mobile */}
       <div className="relative bg-[#1B1B1E] w-full py-6 px-6 sm:px-8 lg:px-16 border-t border-[#2D2D30]">
@@ -250,8 +255,8 @@ function Footer() {
       </div>
 
       {/* Back to top button - New addition */}
-      <button 
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="fixed bottom-6 right-6 w-10 h-10 bg-[#4B5563] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#6B7280] transition-all duration-300 z-50"
         aria-label="Back to top"
       >
